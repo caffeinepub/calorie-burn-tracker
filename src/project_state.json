@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "A calorie burn tracking app",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-form-to-log-new-calorie-burn-activities-with-inputs-for-activity-name-calories-burned-and-duration",
+      "title": "Create a frontend form to log new calorie burn activities with inputs for activity name, calories burned, and duration",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-list-of-all-logged-calorie-burn-activities-showing-activity-name-calories-burned-duration-and-date-time",
+      "title": "Display a list of all logged calorie burn activities showing activity name, calories burned, duration, and date/time",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-show-total-calories-burned-across-all-logged-activities",
+      "title": "Show total calories burned across all logged activities",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-clean-energetic-visual-theme-with-vibrant-accent-colors-modern-typography-and-a-layout-that-emphasizes-activity-tracking-and-progress",
+      "title": "Design a clean, energetic visual theme with vibrant accent colors, modern typography, and a layout that emphasizes activity tracking and progress",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-require-users-to-authenticate-with-internet-identity-before-accessing-any-functionality-in-the-app",
+      "title": "Require users to authenticate with Internet Identity before accessing any functionality in the app",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-form-component-to-allow-users-to-set-their-daily-calorie-burn-goal-with-input-validation",
+      "title": "Create a frontend form component to allow users to set their daily calorie burn goal with input validation",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-user-s-current-daily-calorie-burn-goal-in-the-dashboard-summary-section",
+      "title": "Display the user's current daily calorie burn goal in the dashboard summary section",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Track calorie burn",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend data model to store calorie burn activities with fields for activity name, calories burned, duration in minutes, and timestamp",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement backend functions to add new calorie burn activities and retrieve all activities for the current user",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add user authentication and login requirement",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Store calorie burn activities per-user in the backend so each authenticated user sees only their own data",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add ability to set daily calorie burn goals",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a backend function to set a daily calorie burn goal (numeric value) for the authenticated user",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add a backend function to retrieve the current daily calorie burn goal for the authenticated user",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Calorie Burn Tracker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

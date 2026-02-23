@@ -1,0 +1,50 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add daily calorie burn goal setting",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Create a frontend form component to allow users to set their daily calorie burn goal with input validation",
+      "acceptanceCriteria": [
+        "Form includes a numeric input field for the daily goal",
+        "Input validates that the value is a positive number",
+        "Form displays success/error feedback after submission",
+        "Form is accessible to authenticated users only"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GoalSettingForm.tsx",
+          "operation": "create",
+          "description": "Create a form component with a numeric input for daily calorie burn goal. Include validation for positive numbers only, submit button with loading state, and toast notifications for success/error feedback. Use the authorization component to ensure only authenticated users can access this form. The form should call the backend's setDailyCalorieGoal function via the actor."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add React Query hooks for goal management: useGetDailyCalorieGoal to fetch the current goal using getDailyCalorieGoal backend function, and useSetDailyCalorieGoal mutation hook to update the goal using setDailyCalorieGoal backend function. Include automatic cache invalidation after successful goal updates."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the GoalSettingForm component into the authenticated user dashboard layout, placing it alongside or near the ActivityForm component so users can easily set their daily goal when viewing their calorie tracking dashboard."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Display the user's current daily calorie burn goal in the dashboard summary section",
+      "acceptanceCriteria": [
+        "Daily goal is fetched and displayed in the CaloriesSummary component or nearby",
+        "Shows a visual indicator of progress toward the daily goal (e.g., percentage or progress bar)",
+        "Updates automatically when the goal is changed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CaloriesSummary.tsx",
+          "operation": "modify",
+          "description": "Enhance the summary component to fetch and display the daily calorie burn goal using the useGetDailyCalorieGoal hook. Calculate progress percentage by comparing total calories burned against the goal. Add a visual progress indicator (progress bar or percentage display) showing how close the user is to reaching their daily goal. Include loading skeleton for the goal section and handle the case where no goal has been set yet (display appropriate messaging)."
+        }
+      ]
+    }
+  ]
+}

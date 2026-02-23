@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that conditionally renders login prompt for unauthenticated users or the full calorie tracking interface with goal setting, activity logging, and activity list for authenticated users.",
+  "frontend/src/components/Header.tsx": "Header component with app branding and Internet Identity login/logout functionality.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright information and attribution link to caffeine.ai with UTM tracking.",
+  "frontend/src/components/CaloriesSummary.tsx": "Summary card component displaying total calories burned, duration, activity count, and daily goal progress with a visual progress bar and completion status.",
+  "frontend/src/components/ActivityForm.tsx": "Form component for logging new calorie burn activities with validation and success/error handling.",
+  "frontend/src/components/ActivityList.tsx": "Scrollable list component displaying all logged activities sorted by timestamp with empty state handling.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for fetching and adding activities, and managing daily calorie goals (get and set) with authentication checks and automatic cache invalidation.",
+  "frontend/src/index.css": "Global styles with energetic OKLCH color system featuring vibrant orange primary and blue accent colors for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom border radius and maintaining the OKLCH color token system.",
+  "frontend/src/components/LoginPrompt.tsx": "Centered login gate component displaying app branding, feature highlights with icons, and a call-to-action button that triggers Internet Identity authentication.",
+  "frontend/src/components/GoalSettingForm.tsx": "Form component for setting daily calorie burn goals with validation, loading states, and display of current goal value."
+}

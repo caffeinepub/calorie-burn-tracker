@@ -1,0 +1,94 @@
+{
+  "kind": "build_request",
+  "title": "Add daily calorie burn goal setting",
+  "projectName": "Calorie Burn Tracker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Add a backend function to set a daily calorie burn goal (numeric value) for the authenticated user",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "Make you be able to set daily goals for calories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores a daily calorie goal value per user Principal",
+        "Function accepts a numeric goal value and persists it",
+        "Goal value can be updated by calling the function again"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add a backend function to retrieve the current daily calorie burn goal for the authenticated user",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "Make you be able to set daily goals for calories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Function returns the stored daily goal value for the current user",
+        "Returns a default value (e.g., 0 or null) if no goal has been set"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create a frontend form component to allow users to set their daily calorie burn goal with input validation",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "Make you be able to set daily goals for calories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes a numeric input field for the daily goal",
+        "Input validates that the value is a positive number",
+        "Form displays success/error feedback after submission",
+        "Form is accessible to authenticated users only"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Display the user's current daily calorie burn goal in the dashboard summary section",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "Make you be able to set daily goals for calories"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Daily goal is fetched and displayed in the CaloriesSummary component or nearby",
+        "Shows a visual indicator of progress toward the daily goal (e.g., percentage or progress bar)",
+        "Updates automatically when the goal is changed"
+      ]
+    }
+  ],
+  "constraints": [
+    "Store daily goals per user Principal in the backend",
+    "Maintain the single-actor architecture in backend/main.mo",
+    "Only authenticated users can set or view their daily goals"
+  ],
+  "nonGoals": [
+    "Historical goal tracking or goal history",
+    "Weekly or monthly goal settings",
+    "Notifications when goals are reached"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

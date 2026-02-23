@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-frontend-form-component-to-allow-users-to-set-their-daily-calorie-burn-goal-with-input-validation",
+      "featureTitle": "Create a frontend form component to allow users to set their daily calorie burn goal with input validation",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GoalSettingForm.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-the-user-s-current-daily-calorie-burn-goal-in-the-dashboard-summary-section",
+      "featureTitle": "Display the user's current daily calorie burn goal in the dashboard summary section",
+      "files": [
+        "frontend/src/components/CaloriesSummary.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
