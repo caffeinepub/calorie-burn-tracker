@@ -1,0 +1,79 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T18:02:16.974Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add a backend function to generate a structured workout plan based on a user's fitness goal (e.g., weight loss, muscle gain, endurance). The plan should include workout type, weekly schedule (days per week), exercise list with sets/reps or duration, and estimated calorie burn per session.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Add a React Query mutation hook in frontend/src/hooks/useQueries.ts to call the new backend workout plan generation function, following the same pattern as the existing diet plan generation hook.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useQueries.ts"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create a WorkoutPlanResults component that displays the generated workout plan, showing the weekly schedule as a visual day-by-day breakdown, each day's exercise list with sets/reps or duration, workout type label, and estimated calorie burn per session. Style it consistently with the existing DietPlanResults component.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/WorkoutPlanResults.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/WorkoutPlanResults.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Extend the DietPlannerView (or create a WorkoutPlannerView) to include workout plan generation. After a user selects their fitness goal and submits, show both the diet plan results and the workout plan results. Integrate a Workout Plan tab or section into the existing navigation in App.tsx so users can access the workout plan feature.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/WorkoutPlannerView.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/WorkoutPlannerView.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/DietPlannerForm.tsx",
+    "frontend/src/components/WorkoutPlanResults.tsx",
+    "frontend/src/components/WorkoutPlannerView.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

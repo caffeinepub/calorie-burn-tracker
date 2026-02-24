@@ -1,0 +1,62 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add workout plan generation based on fitness goals",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Add React Query mutation hook for workout plan generation",
+      "acceptanceCriteria": [
+        "A useGenerateWorkoutPlan mutation hook is available and calls the backend actor",
+        "Hook follows the same pattern as the existing diet plan generation hook",
+        "Hook returns workout plan data, loading state, and error state"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add useGenerateWorkoutPlan mutation hook that calls actor.generateWorkoutPlan(goal), following the same pattern as the existing useGenerateDietPlan mutation. The hook should accept a FitnessGoal parameter and return workout plan data with loading and error states via useMutation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create WorkoutPlanResults component to display generated workout plans",
+      "acceptanceCriteria": [
+        "WorkoutPlanResults renders a weekly schedule with day-by-day breakdown",
+        "Each day shows exercise name, sets/reps or duration",
+        "Workout type and estimated calorie burn per session are displayed",
+        "Visual style is consistent with DietPlanResults component"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/WorkoutPlanResults.tsx",
+          "operation": "create",
+          "description": "Create a WorkoutPlanResults component that displays a WorkoutPlan object. Show the plan type as a heading, render weeklySchedule details (daysPerWeek, restDays, sessionLengthMinutes) in a summary card, display estimatedCaloriesPerSession prominently, and render exerciseList as cards showing exercise name, difficulty badge, sets/reps or durationMinutes with appropriate labels. Include onRegenerate and onReset callback props for user actions. Style consistently with DietPlanResults using the same card layout, spacing, and color tokens from the Tailwind config."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Integrate workout plan generation into the UI with navigation",
+      "acceptanceCriteria": [
+        "Users can access the workout plan feature from the main navigation",
+        "Workout plan is generated using the same fitness goal input used for the diet plan",
+        "Workout plan results are displayed after submission",
+        "Navigation tab or section is clearly labeled and consistent with existing UI"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/WorkoutPlannerView.tsx",
+          "operation": "create",
+          "description": "Create a WorkoutPlannerView component following the same structure as DietPlannerView. Use DietPlannerForm to capture the fitness goal, call useGenerateWorkoutPlan mutation on form submit, manage loading and error states, and conditionally render WorkoutPlanResults when a plan is generated. Include authentication gating using useInternetIdentity. Provide regenerate and reset handlers to allow users to generate new plans or return to the form."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a third tab labeled 'Workout Planner' to the existing navigation alongside 'Calorie Tracker' and 'AI Diet Planner'. Import WorkoutPlannerView and render it when the workout tab is active. Maintain consistent tab styling and active state handling using the same pattern as the existing tabs."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T18:02:16.971Z",
+  "summary": "The diff implements all four requirements with good coverage. REQ-1 (backend), REQ-2 (hook), REQ-3 (component), and REQ-4 (navigation/view) are all addressed. However, REQ-1's backend implementation in main.mo is truncated and cannot be fully verified. REQ-4 specifies showing both diet AND workout plan results after submission, but the implementation shows them in separate tabs. Minor concerns exist but most ACs are satisfied.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "After a user selects their fitness goal and submits, show both the diet plan results and the workout plan results.",
+      "reason": "The implementation places diet and workout plans in separate tabs (AI Diet Planner and Workout Planner) rather than showing both results together after a single submission. The WorkoutPlannerView only shows workout plan results, not both diet and workout results simultaneously.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/WorkoutPlannerView.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "DietPlannerForm was modified to accept a configurable submitLabel prop and showStats prop for reuse across planners, with an altered onSubmit signature.",
+      "reason": "The build request did not specifically request modifying DietPlannerForm's interface with new props. While reusing the form is a reasonable implementation choice, these interface changes were not requested.",
+      "evidence": [
+        "frontend/src/components/DietPlannerForm.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Workout planner theme tokens (--workout-primary, --workout-accent, --workout-bg) added to CSS and Tailwind config as a separate color namespace.",
+      "reason": "The build request required visual consistency with the existing diet planner theme but did not explicitly request a new separate Tailwind color namespace or new CSS custom properties for workout theming.",
+      "evidence": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "frontend/src/components/DietPlannerForm.tsx",
+    "frontend/src/components/WorkoutPlanResults.tsx",
+    "frontend/src/components/WorkoutPlannerView.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

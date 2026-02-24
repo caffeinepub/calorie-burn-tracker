@@ -1,0 +1,66 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-react-query-mutation-hook-in-frontend-src-hooks-usequeries-ts-to-call-the-new-backend-workout-plan-generation-function-following-the-same-pattern-as-the-existing-diet-plan-generation-hook",
+      "featureTitle": "Add a React Query mutation hook in frontend/src/hooks/useQueries.ts to call the new backend workout plan generation function, following the same pattern as the existing diet plan generation hook.",
+      "files": [
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-workoutplanresults-component-that-displays-the-generated-workout-plan-showing-the-weekly-schedule-as-a-visual-day-by-day-breakdown-each-day-s-exercise-list-with-sets-reps-or-duration-workout-type-label-and-estimated-calorie-burn-per-session-style-it-consistently-with-the-existing-dietplanresults-component",
+      "featureTitle": "Create a WorkoutPlanResults component that displays the generated workout plan, showing the weekly schedule as a visual day-by-day breakdown, each day's exercise list with sets/reps or duration, workout type label, and estimated calorie burn per session. Style it consistently with the existing DietPlanResults component.",
+      "files": [
+        "frontend/src/components/WorkoutPlanResults.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-extend-the-dietplannerview-or-create-a-workoutplannerview-to-include-workout-plan-generation-after-a-user-selects-their-fitness-goal-and-submits-show-both-the-diet-plan-results-and-the-workout-plan-results-integrate-a-workout-plan-tab-or-section-into-the-existing-navigation-in-app-tsx-so-users-can-access-the-workout-plan-feature",
+      "featureTitle": "Extend the DietPlannerView (or create a WorkoutPlannerView) to include workout plan generation. After a user selects their fitness goal and submits, show both the diet plan results and the workout plan results. Integrate a Workout Plan tab or section into the existing navigation in App.tsx so users can access the workout plan feature.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/WorkoutPlannerView.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

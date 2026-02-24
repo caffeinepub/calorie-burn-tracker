@@ -1,0 +1,97 @@
+{
+  "kind": "build_request",
+  "title": "Add workout plan generation based on fitness goals",
+  "projectName": "CalorieBurn AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a backend function to generate a structured workout plan based on a user's fitness goal (e.g., weight loss, muscle gain, endurance). The plan should include workout type, weekly schedule (days per week), exercise list with sets/reps or duration, and estimated calorie burn per session.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add a workout plan based on goals to"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes a function that accepts a fitness goal and returns a structured workout plan",
+        "Workout plan includes workout type, weekly schedule, exercise list with sets/reps or duration, and estimated calorie burn per session",
+        "Function handles all fitness goals supported by the diet planner (weight loss, muscle gain, endurance, etc.)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a React Query mutation hook in frontend/src/hooks/useQueries.ts to call the new backend workout plan generation function, following the same pattern as the existing diet plan generation hook.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add a workout plan based on goals to"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A useGenerateWorkoutPlan mutation hook is available and calls the backend actor",
+        "Hook follows the same pattern as the existing diet plan generation hook",
+        "Hook returns workout plan data, loading state, and error state"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a WorkoutPlanResults component that displays the generated workout plan, showing the weekly schedule as a visual day-by-day breakdown, each day's exercise list with sets/reps or duration, workout type label, and estimated calorie burn per session. Style it consistently with the existing DietPlanResults component.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add a workout plan based on goals to"
+        ]
+      },
+      "acceptanceCriteria": [
+        "WorkoutPlanResults renders a weekly schedule with day-by-day breakdown",
+        "Each day shows exercise name, sets/reps or duration",
+        "Workout type and estimated calorie burn per session are displayed",
+        "Visual style is consistent with DietPlanResults component"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Extend the DietPlannerView (or create a WorkoutPlannerView) to include workout plan generation. After a user selects their fitness goal and submits, show both the diet plan results and the workout plan results. Integrate a Workout Plan tab or section into the existing navigation in App.tsx so users can access the workout plan feature.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add a workout plan based on goals to"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can access the workout plan feature from the main navigation",
+        "Workout plan is generated using the same fitness goal input used for the diet plan",
+        "Workout plan results are displayed after submission",
+        "Navigation tab or section is clearly labeled and consistent with existing UI"
+      ]
+    }
+  ],
+  "constraints": [
+    "All Motoko logic must remain in backend/main.mo (single-actor architecture)",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui",
+    "Workout plan UI must be visually consistent with the existing diet planner theme and design tokens"
+  ],
+  "nonGoals": [
+    "Real-time workout tracking or logging",
+    "Integration with external fitness APIs or third-party services",
+    "Video or animated exercise demonstrations",
+    "Personalized workout adjustments based on past activity logs (beyond goal selection)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

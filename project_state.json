@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Fitness/diet app with meal recommendations, macro breakdowns, and workout plans based on user goals.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-add-a-react-query-mutation-hook-in-frontend-src-hooks-usequeries-ts-to-call-the-new-backend-workout-plan-generation-function-following-the-same-pattern-as-the-existing-diet-plan-generation-hook",
+      "title": "Add a React Query mutation hook in frontend/src/hooks/useQueries.ts to call the new backend workout plan generation function, following the same pattern as the existing diet plan generation hook.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-workoutplanresults-component-that-displays-the-generated-workout-plan-showing-the-weekly-schedule-as-a-visual-day-by-day-breakdown-each-day-s-exercise-list-with-sets-reps-or-duration-workout-type-label-and-estimated-calorie-burn-per-session-style-it-consistently-with-the-existing-dietplanresults-component",
+      "title": "Create a WorkoutPlanResults component that displays the generated workout plan, showing the weekly schedule as a visual day-by-day breakdown, each day's exercise list with sets/reps or duration, workout type label, and estimated calorie burn per session. Style it consistently with the existing DietPlanResults component.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-extend-the-dietplannerview-or-create-a-workoutplannerview-to-include-workout-plan-generation-after-a-user-selects-their-fitness-goal-and-submits-show-both-the-diet-plan-results-and-the-workout-plan-results-integrate-a-workout-plan-tab-or-section-into-the-existing-navigation-in-app-tsx-so-users-can-access-the-workout-plan-feature",
+      "title": "Extend the DietPlannerView (or create a WorkoutPlannerView) to include workout plan generation. After a user selects their fitness goal and submits, show both the diet plan results and the workout plan results. Integrate a Workout Plan tab or section into the existing navigation in App.tsx so users can access the workout plan feature.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add workout plan generation based on user fitness goals",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a backend function to generate a structured workout plan based on a user's fitness goal (e.g., weight loss, muscle gain, endurance). The plan should include workout type, weekly schedule (days per week), exercise list with sets/reps or duration, and estimated calorie burn per session.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "CalorieBurn AI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
